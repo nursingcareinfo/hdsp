@@ -193,8 +193,8 @@ const Hero = () => (
           <div className="space-y-4 pt-12">
             <div className="aspect-[4/5] rounded-[2rem] bg-gray-300 overflow-hidden relative group">
               <img 
-                src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&q=85&w=800" 
-                alt="Professional Maid" 
+                src="https://images.unsplash.com/photo-1581578731548-c64695ce6958?auto=format&fit=crop&q=85&w=800" 
+                alt="Professional House Maid" 
                 className="w-full h-full object-cover grayscale active:grayscale-0 transition-all duration-700" 
                 referrerPolicy="no-referrer"
               />
@@ -214,7 +214,7 @@ const Hero = () => (
             </div>
             <div className="aspect-[4/5] rounded-[2rem] bg-gray-300 overflow-hidden relative group">
               <img 
-                src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=85&w=800" 
+                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=85&w=800" 
                 alt="Professional Nanny" 
                 className="w-full h-full object-cover grayscale active:grayscale-0 transition-all duration-700" 
                 referrerPolicy="no-referrer"

@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-cloud-dancer: #EAE5DB; /* Deepened from #F0EEE9 */
+  --color-bone: #F5F2ED;
+  --color-warm-accent: #C49B71;
+  --color-deep-charcoal: #2A2826; /* Slightly warmer charcoal */
+  --color-soft-clay: #A8763E;
+  --color-linen: #DCD7CE;
+}
+
+@layer base {
+  body {
+    @apply bg-cloud-dancer text-deep-charcoal font-sans antialiased selection:bg-warm-accent selection:text-white;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display font-bold tracking-tight text-deep-charcoal/90;
+  }
+}
+
+.bento-card {
+  @apply bg-bone/80 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-sm transition-all duration-300 hover:shadow-xl hover:bg-bone;
+}
+
+.glass-nav {
+  @apply sticky top-0 z-50 bg-cloud-dancer/90 backdrop-blur-lg border-b border-linen/30;
+}
+
+.btn-primary {
+  @apply bg-warm-accent text-white px-8 py-3 rounded-full font-medium transition-all hover:scale-105 active:scale-95 shadow-lg shadow-warm-accent/20;
+}
+
+.btn-whatsapp {
+  @apply bg-[#25D366] text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 transition-all hover:shadow-lg hover:-translate-y-1;
+}
+
+.content-chunk {
+  @apply py-16 scroll-mt-20;
+}

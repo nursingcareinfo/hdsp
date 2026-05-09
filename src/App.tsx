@@ -41,25 +41,25 @@ interface VettingStep {
 const STAFF_CATEGORIES: StaffCategory[] = [
   {
     title: "House Maids",
-    icon: <Home className="w-6 h-6" />,
+    icon: <Home className="w-6 h-6 text-warm-accent" />,
     description: "Experienced helpers for basic cleaning (4–12h) or 24/7 Live-in service.",
     salaryRange: "Rs. 35,000 – 60,000"
   },
   {
     title: "Home Cooks",
-    icon: <ChefHat className="w-6 h-6" />,
+    icon: <ChefHat className="w-6 h-6 text-warm-accent" />,
     description: "Specialized in Desi, Continental, or specific dietary requirements.",
     salaryRange: "Rs. 35,000 – 55,000"
   },
   {
     title: "Nannies",
-    icon: <Baby className="w-6 h-6" />,
+    icon: <Baby className="w-6 h-6 text-warm-accent" />,
     description: "Dedicated childcare support focusing on non-educational physical care.",
     salaryRange: "Rs. 30,000 – 50,000"
   },
   {
     title: "Drivers",
-    icon: <Car className="w-6 h-6" />,
+    icon: <Car className="w-6 h-6 text-warm-accent" />,
     description: "Background-verified drivers for family, school, or office logistics.",
     salaryRange: "Rs. 35,000 – 50,000"
   }
@@ -94,11 +94,22 @@ const Navbar = () => {
     <nav className="glass-nav">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-warm-accent rounded-xl flex items-center justify-center">
-              <ShieldCheck className="text-white w-6 h-6" />
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 flex items-center justify-center overflow-hidden">
+              <img 
+                src="logo.png" 
+                alt="HDSP Logo" 
+                className="w-full h-full object-contain" 
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.parentElement!.innerHTML = '<div class="w-10 h-10 bg-warm-accent rounded-xl flex items-center justify-center"><svg class="text-white w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg></div>';
+                }}
+              />
             </div>
-            <span className="font-display font-bold text-xl tracking-tight">HOME DOMESTIC STAFF PROVIDER</span>
+            <div className="flex flex-col">
+              <span className="font-serif font-bold text-2xl tracking-tight leading-none text-warm-accent">HDSP</span>
+              <span className="text-[8px] font-bold tracking-[0.2em] text-deep-charcoal/60 uppercase">Home Domestic Staff Provider</span>
+            </div>
           </div>
           
           <div className="hidden md:flex items-center gap-8">
@@ -247,10 +258,10 @@ const BentoGrid = () => (
           <div className="grid sm:grid-cols-3 gap-6">
             {VETTING_STEPS.map((step, idx) => (
               <div key={idx} className="space-y-3">
-                <div className="w-10 h-10 rounded-full bg-bone flex items-center justify-center shadow-sm">
+                <div className="w-10 h-10 rounded-full bg-warm-accent/10 flex items-center justify-center shadow-sm">
                   {step.icon}
                 </div>
-                <h4 className="font-display font-bold text-xs uppercase tracking-wider">{step.title}</h4>
+                <h4 className="font-display font-bold text-xs uppercase tracking-wider text-warm-accent">{step.title}</h4>
                 <p className="text-[10px] text-gray-500 leading-relaxed uppercase tracking-widest">{step.description}</p>
               </div>
             ))}
@@ -375,9 +386,20 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid md:grid-cols-4 gap-12 mb-16">
         <div className="col-span-1 md:col-span-2">
-          <div className="flex items-center gap-2 mb-6">
-            <ShieldCheck className="text-warm-accent w-6 h-6" />
-            <span className="font-display font-bold text-2xl tracking-tight uppercase">HOME DOMESTIC STAFF PROVIDER</span>
+          <div className="flex items-center gap-3 mb-6">
+            <img 
+              src="logo.png" 
+              alt="HDSP Logo" 
+              className="w-12 h-12 object-contain brightness-0 invert opacity-80" 
+              onError={(e) => {
+                e.currentTarget.style.display = 'none';
+                e.currentTarget.parentElement!.innerHTML = '<div class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center"><svg class="text-warm-accent w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg></div>';
+              }}
+            />
+            <div className="flex flex-col">
+              <span className="font-serif font-bold text-3xl tracking-tight text-white">HDSP</span>
+              <span className="text-[8px] font-bold tracking-[0.2em] text-white/60 uppercase">Home Domestic Staff Provider</span>
+            </div>
           </div>
           <p className="text-gray-400 max-w-sm mb-6">
             Karachi's trusted boutique domestic placement agency. We provide verified staff for households across all districts of Karachi.

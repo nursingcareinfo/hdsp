@@ -1,16 +1,17 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&family=Space+Grotesk:wght@400;500;700&display=swap');
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Playfair Display", serif;
   
-  --color-cloud-dancer: #EAE5DB; /* Deepened from #F0EEE9 */
-  --color-bone: #F5F2ED;
-  --color-warm-accent: #C49B71;
-  --color-deep-charcoal: #2A2826; /* Slightly warmer charcoal */
-  --color-soft-clay: #A8763E;
-  --color-linen: #DCD7CE;
+  --color-cloud-dancer: #F1E4C9; /* Changed to match logo cream */
+  --color-bone: #FAF7F2;
+  --color-warm-accent: #BC4B20; /* Changed to match logo terracotta */
+  --color-deep-charcoal: #2A2826;
+  --color-soft-clay: #8B3617;
+  --color-linen: #E5DCC5;
 }
 
 @layer base {

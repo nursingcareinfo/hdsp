@@ -43,7 +43,7 @@ const Navbar = () => (
           </div>
           <div className="flex flex-col">
             <span className="font-serif font-bold text-2xl tracking-tighter leading-none text-deep-charcoal">HDSP</span>
-            <span className="text-[7px] font-bold tracking-[0.2em] text-warm-accent uppercase whitespace-nowrap">Home Domestic Staff Provider</span>
+            <span className="text-[7px] font-bold tracking-[0.2em] text-warm-accent uppercase whitespace-nowrap">Home Domestic Services Provider</span>
           </div>
         </div>
         
